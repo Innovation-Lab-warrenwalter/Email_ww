@@ -1,27 +1,27 @@
-{
-  "type": "json_schema",
-  "json_schema": {
-    "name": "email_schema",
-    "strict": true,
-    "schema": {
-      "type": "object",
-      "properties": {
-        "email": {
-          "type": "object",
-          "properties": {
-            "subject": {
-              "type": "string",
-              "description": "Sujet explicite et centré sur l’enjeu principal ou le KPI"
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "email_schema",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "object",
+            "properties": {
+              "subject": {
+                "type": "string",
+                "description": "Sujet explicite et centré sur l’enjeu principal ou le KPI"
+              },
+              "body": {
+                "type": "string",
+                "description": "Corps de l’email, maximum 900 caractères, sans sauts de ligne ni HTML"
+              }
             },
-            "body": {
-              "type": "string",
-              "description": "Corps de l’email, max 900 caractères, sans sauts de ligne ni HTML"
-            }
-          },
-          "required": ["subject", "body"]
-        }
-      },
-      "required": ["email"]
+            "required": ["subject", "body"]
+          }
+        },
+        "required": ["email"]
+      }
     }
   }
-}
