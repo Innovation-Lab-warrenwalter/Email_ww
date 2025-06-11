@@ -1,22 +1,27 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "ProspectionEmail",
-  "type": "object",
-  "properties": {
-    "email": {
+  "type": "json_schema",
+  "json_schema": {
+    "name": "email_schema",
+    "strict": true,
+    "schema": {
       "type": "object",
       "properties": {
-        "subject": {
-          "type": "string",
-          "description": "Sujet explicite et centré sur l’enjeu principal ou le KPI"
-        },
-        "body": {
-          "type": "string",
-          "description": "Corps de l’email, max 900 caractères, sans sauts de ligne ni HTML"
+        "email": {
+          "type": "object",
+          "properties": {
+            "subject": {
+              "type": "string",
+              "description": "Sujet explicite et centré sur l’enjeu principal ou le KPI"
+            },
+            "body": {
+              "type": "string",
+              "description": "Corps de l’email, max 900 caractères, sans sauts de ligne ni HTML"
+            }
+          },
+          "required": ["subject", "body"]
         }
       },
-      "required": ["subject", "body"]
+      "required": ["email"]
     }
-  },
-  "required": ["email"]
+  }
 }
