@@ -1,6 +1,22 @@
 {
-"email": {
-"subject": "[Sujet explicite et centré sur l’enjeu principal ou le KPI]",
-"body": "[Corps de l’email]"
-}
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProspectionEmail",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "string",
+          "description": "Sujet explicite et centré sur l’enjeu principal ou le KPI"
+        },
+        "body": {
+          "type": "string",
+          "description": "Corps de l’email, max 900 caractères, sans sauts de ligne ni HTML"
+        }
+      },
+      "required": ["subject", "body"]
+    }
+  },
+  "required": ["email"]
 }
